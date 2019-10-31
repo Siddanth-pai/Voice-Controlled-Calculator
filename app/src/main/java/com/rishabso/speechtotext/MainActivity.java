@@ -24,13 +24,14 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		// This text view is used to show the result
 		txvResult = (TextView) findViewById(R.id.txvResult);
 		resView = (TextView) findViewById(R.id.resView);
 
 	}
 
 	public void getSpeechInput(View view) {
-
+		//for speech recognition
 		Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
 		intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
 		intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
